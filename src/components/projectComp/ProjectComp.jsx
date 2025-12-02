@@ -16,8 +16,8 @@ const PROJECTS =[
   desc: 'A modern and responsive portfolio built with React and Framer Motion, showcasing projects, skills, and achievements with smooth animations and interactive UI.',
   ss: '/portfolioai.png',
   tech: ['React', 'Framer Motion', 'Tailwind CSS'],
-  live: 'http://localhost:5174',
-  code: '#'
+  live: 'https://portfolio-website-nine-tau-77.vercel.app/',
+  code: 'https://github.com/clash2106/portfolio-website'
   },
   
 ]
