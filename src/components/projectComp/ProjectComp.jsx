@@ -6,10 +6,10 @@ const PROJECTS =[
     {
     title: 'SEREIN ,The E-Commerce website ',
     desc: 'SEREIN is a modern, minimal e-commerce website designed for a smooth, elegant shopping experience with responsive design and a clean UI.',
-    ss: './public/serein.png',
+    ss: './serein.png',
     tech: ['React', 'Express.js','MongoDB', 'Tailwind CSS'],
-    live: 'href="http://localhost:5173"',
-    code: '#'
+    live: 'https://serein-skincare-yf93.vercel.app/"',
+    code: 'https://github.com/clash2106/serein-skincare'
     },
     {
   title: 'Portfolio Website',
