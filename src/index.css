@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root{
+  --bg:#050509;
+  --card:#0f1114;
+  --muted:#9aa0a6;
+  --accent:#7c3aed;
+  --accent-2:#070c38;
+  --glass: rgba(255,255,255,0.03);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+body{
+  margin:0;
+  background: 
+              var(--bg);
+  color:#e6eef8;
+  
+}
+
+/* src/index.css */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+/*gives me a blinking effect*/
+
+/*
+1. This creates the blink effect: invisible → visible → invisible.
+2.  from → shorthand for 0% (start of the animation).
+    to → shorthand for 100% (end of the animation).
+    border-color: transparent → makes the right border invisible at the start and end of the animation.
+*/
+@keyframes blinkCaret {
+  from, to { border-color: transparent }
+  50% { border-color: currentColor }
+}
+
+
+/*
+class you apply to the element (like <h1>) to combine the typing effect and the blinking caret.
+
+1.whitewhite-space: nowrap; -> Prevents the text from wrapping to a new line.
+2. Hides any text that extends beyond the container width.
+3.Adds a right border to act as the blinking caret.
+4.This line applies two animations at once.
+
+1) typing 3s steps(30, end)
+typing → another animation (usually defined in @keyframes typing) that increases the element’s width from 0 → 100%.
+3s → total duration of the typing animation.
+steps(30, end) → creates a stepwise progression, instead of smooth interpolation:
+30 → number of steps (roughly the number of letters)
+end → step completes at the end of each interval, making it look like letters appear one by one.
+
+//the animation is divided into 5 discrete steps (because the word has 5 letters).
+//This makes the letter appear instantly at the end of the step, instead of partially during the step.
+
+
+
+2) blinkCaret 0.75s step-end infinite
+blinkCaret → the blinking animation defined above.
+0.75s → duration of one blink cycle.
+step-end → ensures the jump between visible and invisible happens at the end of each step, giving a sharp blink instead of fading.
+infinite → repeats the animation forever.
+*/
+.typing-effect {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  animation: typing 3s steps(30, end), blinkCaret 0.75s step-end infinite;
+}
